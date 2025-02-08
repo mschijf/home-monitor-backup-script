@@ -24,3 +24,5 @@ then
 		~/dropbox-uploader/dropbox_uploader.sh delete Backup/home-monitor/$line
 	done
 fi
+
+rm $tmpFile

@@ -1,7 +1,8 @@
 backuptime=$(date +%Y%m%d_%H%M%S)
 
-mkdir ~/tmp_backup
-cd ~/tmp_backup
+backupdir=/tmp/home-monitor-backup 
+mkdir -D $backupdir
+cd $backupdir
 
 docker exec -i home-monitor /usr/local/bin/pg_dump -U home-monitor-app home-monitor > backup_postgres.sql
 tar -czf backup_postgres.tar.gz ./backup_postgres.sql
@@ -17,4 +18,4 @@ $script_path/cleanup_backup.sh _postgres 672
 
 rm backup_postgres.tar.gz
 rm backup_postgres.sql
-rmdir ~/tmp_backup
+rmdir $backupdir
