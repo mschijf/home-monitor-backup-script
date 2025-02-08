@@ -22,5 +22,5 @@
 # 
 # m h  dom mon dow   command
 
-@reboot ~/home-monitor/script/start.sh
-0 * * * * ~/home-monitor-script/backup.sh >> ~/home-monitor/backup_log 2>> ~/home-monitor/backup_log
+@reboot ~/deployables/deploy_scripts/run.sh ms home-monitor
+0 * * * * ~/home-monitor/backup-script/backup.sh >> ~/home-monitor/backup_log 2>> ~/home-monitor/backup_log

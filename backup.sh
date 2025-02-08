@@ -11,7 +11,9 @@ echo -n '  '
 du -h0 backup_postgres.tar.gz
 echo -n '  '
 ~/dropbox-uploader/dropbox_uploader.sh upload ~/tmp_backup/backup_postgres.tar.gz Backup/home-monitor/${backuptime}_postgres
-~/home-monitor-script/cleanup_backup.sh _postgres 672
+
+script_path=$(dirname $(realpath -s $0))
+$script_path/cleanup_backup.sh _postgres 672
 
 rm backup_postgres.tar.gz
 rm backup_postgres.sql
