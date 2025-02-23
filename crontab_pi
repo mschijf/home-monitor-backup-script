@@ -23,4 +23,3 @@
 # m h  dom mon dow   command
 
 @reboot ~/repository/repository-run-scripts/run.sh ms home-monitor
-0 * * * * ~/home-monitor-backup-script/backup.sh >> ~/application/home-monitor/backup_log 2>> ~/application/home-monitor/backup_log
