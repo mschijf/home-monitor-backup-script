@@ -11,7 +11,7 @@ backupdir=/tmp/home-monitor-backup
 mkdir $backupdir
 cd $backupdir
 
-echo "Starting backup with postfix '$postfix'
+echo "Starting backup with postfix '$postfix'"
 
 docker exec -i home-monitor /usr/local/bin/pg_dump -U home-monitor-app home-monitor > backup.sql
 tar -czf backup.tar.gz ./backup.sql
